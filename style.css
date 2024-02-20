@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  color: #495057;
+  background-color: #40acca;
+  width: 100%;
+  /* background-color: #f7b924;
+  background-color: #3ac47d;
+  background-color: #3f6ad8; */
+}
+.container {
+  width: 700px;
+  margin: 60px auto;
+  background-color: #fff;
+}
+.card-header {
+  background-color: #3f6ad8;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.card h2 {
+  text-align: center;
+  flex: 1;
+}
+.normal{
+  background-color: #9fa8da;
+}
+.done{
+  background-color: #3ac47d;
+}
+/* ul li:nth-child(odd) {
+  background-color: #9fa8da;
+  /* background-color: #3ac47d; */
+ */
+ul li:nth-child(odd) p {
+  font-size: 25px;
+  color: #000;
+}
+ul li {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+p {
+  flex: 1;
+  font-size: 25px;
+  color: #000;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.fa-trash {
+  color: white;
+  background-color: #b71c1c;
+  padding: 8px;
+  transition: all 0.2s ease-in;
+}
+.fa-trash:hover {
+  color: #b71c1c;
+  background-color: transparent;
+}
+.fa-check {
+  color: white;
+  background-color: #3ac47d;
+  padding: 8px;
+  transition: all 0.2s ease-in;
+}
+.fa-check:hover {
+  color: #3ac47d;
+  background-color: transparent;
+}
+.fa-close{
+  color: white;
+  background-color: #b71c1c;
+  padding: 8px;
+  transition: all 0.2s ease-in;
+}
+.fa-close:hover {
+  color: #b71c1c;
+  background-color: transparent;
+}
+.fa-pen-to-square {
+  color: white;
+  background-color: #3f6ad8;
+  padding: 8px;
+  transition: all 0.2s ease-in;
+}
+.fa-pen-to-square:hover {
+  color: #3f6ad8;
+  background-color: transparent;
+}
+button {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  color: #f7b924;
+  border: 2px solid #f7b924;
+  padding: 10px;
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+button::after {
+  content: "Add Task";
+  position: absolute;
+  right: 32px;
+  top: 12px;
+  transition: 0.5s;
+}
+button::before {
+  content: "Add Task";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transform: translatex(-150%);
+  transition: 0.5s;
+}
+button:hover::before {
+  transform: translatex(39%);
+}
+button:hover::after {
+  transform: translateX(200%);
+}
